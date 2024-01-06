@@ -20,9 +20,9 @@ const LocalThemedBox = () => {
     },[isDark]);
 
 return(
-    <div style={{width:'200px',height:'200px',border:'2px solid green'}} id="local-themed-box" className={`bg-${isDarkTheme} txt-${isDarkTheme!="dark"? "light":"dark"}`}>
-        <p>Hii...</p>
-        <button className={`btn btn-${isDarkTheme!="dark"? "light":"dark"}`} id="themed-button" onClick={()=>{changeTheme()}}>toggle Local Theme to {isDarkTheme!="dark"? "dark":"light"} </button>
+    <div style={{width:'200px',height:'200px',border:'2px solid green'}} id="local-themed-box" className={`bg-${isDarkTheme} `}>
+        <p id='local-themed-text-container' className={`txt-${isDarkTheme!="dark"? "light":"dark"}`}>Hii...</p>
+        <button className={`btn btn-${isDarkTheme!="dark"? "light":"dark"} txt-${isDarkTheme!="dark"? "light":"dark"}`} id="local-theme-toggler" onClick={changeTheme}>Toggle local theme to {isDarkTheme!="dark"? "dark":"light"} </button>
         
     </div>
 )
